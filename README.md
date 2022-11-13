@@ -45,12 +45,11 @@
 &nbsp;
 
 ### <mark> **GiroEsquerda** </mark> 
-> Libera a passagem para a esquerda, e bloqueia na outra 
+> Libera a passagem para a esquerda, e bloqueia na outra. 
 
 ### <mark> **GiroDireita** </mark> 
-> Libera a passagem para a direita, e libera na outra direção
-libera a passagem para a esquerda, e bloqueia na outra 
-Boolean **** - direção
+> Libera a passagem para a direita, e bloqueia na outra direção.
+
 
 &nbsp;
 
@@ -58,17 +57,9 @@ Boolean **** - direção
 
 ## Classes Caso Ticket Negado
 ### <mark> **TicketNegado** </mark> 
-> informa por 2s que o ticket foi negado e bloqueia a passagem caso algum dos sensores tente ler 
-
-  
-
+> informa por 2s que o ticket foi negado e bloqueia a passagem caso algum dos sensores seja acionado(tentativa de passagem). 
 
 &nbsp;
-
-
-
-&nbsp;
-
 ***
 
 
