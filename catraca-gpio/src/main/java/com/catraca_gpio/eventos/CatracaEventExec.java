@@ -1,10 +1,10 @@
 package com.catraca_gpio.eventos;
 
-import com.catraca_gpio.eventos.enums.DirecaoGiro;
+import com.catraca_gpio.enums.Comportamento;
 
 public class CatracaEventExec {
 
-    public boolean liberarCatraca(DirecaoGiro direcao){
+    public boolean liberarCatraca(Comportamento direcao){
         return true;
     }
 

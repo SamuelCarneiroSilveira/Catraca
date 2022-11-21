@@ -1,5 +1,0 @@
-com\catraca_gpio\controller\ShellController.class
-com\catraca_gpio\eventos\CatracaEventExec.class
-com\catraca_gpio\controller\GpioController.class
-com\catraca_gpio\eventos\enums\DirecaoGiro.class
-com\catraca_gpio\eventos\TesteDosComponentes.class
