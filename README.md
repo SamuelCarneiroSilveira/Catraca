@@ -8,7 +8,6 @@
 ### <mark>**TestaPlaca**</mark>
 
 
-
 > Aciona todos os componentes simultaneamente, pede a leitura dos sensores, e emite um sinal visual e sonoro para indicar o funcionamento deles.
 
 &nbsp;
@@ -19,37 +18,65 @@
 
 
 
->Deve-se definir um comportamento padrão entre os 3 abaixo, o código deve ser orientado pra sempre voltar para um deles.
+>Deve-se definir um comportamento padrão, o código deve ser orientado pra sempre voltar para ele.
+
 
 <!-- &nbsp; -->
 
-### <mark> **Standart** </mark> 
+
+
+
+## <mark> **Standard** </mark> 
+> Classe responsável por identificar o comportamento padrão, e bloquear ou liberar entradas sem ticket
+
+<!-- &nbsp; -->
+
+### <mark> **ENUM Comportamento** </mark> 
+> Enumeração para traduzir o comportamento padrão para a classe standard.
+#### <mark> **NENHUM_LIVRE** </mark> 
 > Entrada sem ticket bloqueada para os dois lados.
-### <mark> **DireitaLivre** </mark> 
+#### <mark> **DIREITA_LIVRE** </mark> 
 > Entrada sem ticket bloqueada para o lado esquerdo.
-### <mark> **EsquerdaLivre** </mark> 
+#### <mark> **ESQUERDA_LIVRE** </mark> 
 > Entrada sem ticket bloqueada para o lado direito.
+
+### <mark> **setComportamento** </mark> 
+> Esta classe define o comportamento, deve receber um enum entre os 3 enums sitados acima, através da função ordinal.
+
+
 
 &nbsp;
 ***
 
 ## Classes Caso Ticket Aprovado
->As duas funções aguardam 6 segundos pela leitura do sensor (Tentativa de passagem).
+>A função aguarda 6 segundos pela leitura do sensor (Tentativa de passagem).
 
 > Caso a pessoa tente passar na direção errada, a catraca trava, e a função retorna false
 
-> Caso passe na direção certa, a catraca retorna true e aguarda 4s para passagem.
+> Caso passe na direção certa, a catraca entra em um loop para verificar se o giro foi concluido, a catraca retorna true caso concluido, e false caso o giro não seja completo.
   
-- Aqui será adicionado um contador de giro, estou em contato com o Ariel pra entender a resposta que os sensores passam de acordo com o giro, enquanto isso ela libera a passagem por 4s) 
 
-&nbsp;
 
-### <mark> **GiroEsquerda** </mark> 
-> Libera a passagem para a esquerda, e bloqueia na outra. 
+## <mark> **Giro** </mark> 
+> Classe responsável por identificar o padrão de giro, bloquear entradas para o lado oposto, e fazer a contagem do giro.
 
-### <mark> **GiroDireita** </mark> 
-> Libera a passagem para a direita, e bloqueia na outra direção.
+<!-- &nbsp; -->
 
+
+### <mark> **ENUM Giro** </mark> 
+> Enumeração para traduzir o comportamento padrão de giro para a classe Giro.
+
+#### <mark> **AMBOS** </mark> 
+> Libera a passagem para os dois lados e faz a contagem do giro. 
+
+#### <mark> **DIREITA** </mark> 
+> Libera a passagem para a direita,, faz a contagem do giro e bloqueia na outra direção.
+
+#### <mark> **ESQUERDA** </mark> 
+> Libera a passagem para a esquerda, faz a contagem do giro, e bloqueia na outra direção.
+
+### <mark> **setGiro** </mark> 
+> Esta classe define a direção do giro, deve receber um enum entre os 3 enums sitados acima, através da função ordinal.
 
 &nbsp;
 
@@ -63,9 +90,7 @@
 ***
 
 
-> Importante que após o uso das classes de giro e ticketNegado o program
->a volte para um dos comportamentos padrão 
-> 
+
 > ![texto alt](https://media.giphy.com/media/tIeCLkB8geYtW/giphy.gif)
 > 
 > Obrigado!
