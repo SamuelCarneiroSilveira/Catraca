@@ -1,6 +1,15 @@
 # Documentação Gate Controller 
 
+## Teste de comandos 
+ 
 
+### <mark>**TestMenu.jar**</mark>
+
+
+> Abre um menu com todas as funções da catraca 
+
+&nbsp;
+*** 
 
 ## Classe de Teste da Placa
  
